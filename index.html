@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG 代辦事項系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>RPG 代辦事項系統</h1>
+    
+    <div id="status-panel">
+        <p><strong>等級：</strong> <span id="level">1</span> | <strong>軍階：</strong> <span id="rank">新手射手</span></p>
+        <p><strong>武器：</strong> <span id="weapon">木弓 🌿🏹</span></p>
+        <p><strong>屬性值：</strong> STR: <span id="str">4</span> | AGI: <span id="agi">4</span> | DEX: <span id="dex">4</span> | VIT: <span id="vit">4</span> | INT: <span id="int">4</span></p>
+        <p><strong>任務點數：</strong> <span id="points">0 P</span></p>
+        <p><strong>當前 BUFF：</strong> <span id="buffs">無</span></p>
+        <p><strong>當前 DOT：</strong> <span id="dots">無</span></p>
+    </div>
+
+    <h2>當前任務</h2>
+    <input type="text" id="task-input" placeholder="輸入新任務">
+    <button onclick="addTask()">新增任務</button>
+    <button onclick="splitTaskWithAI()">AI 拆分任務</button>
+    <p><strong>你的 OpenAI API Key:</strong></p>
+    <input type="text" id="api-key" placeholder="輸入 OpenAI API Key">
+    
+    <ul id="task-list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
